@@ -1,15 +1,59 @@
-Wankam Medical Center Static Site Generator
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wankam Medical Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Wankam Medical Center</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
-The Wankam Medical Center Static Site Generator is a lightweight, efficient tool designed to create and deploy a professional static website for Wankam Medical Center on GitHub Pages. It streamlines the process of building an informative and user-friendly medical website with minimal effort, ensuring reliability, security, and fast load times.
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer a range of medical services tailored to your needs.</p>
+        </section>
 
-Key Features:
-Pre-Designed Templates – Choose from clean, responsive themes tailored for medical institutions.
-Markdown-Based Content – Easily update pages with simple text files.
-Auto-Generated Pages – Dynamically create homepage, services, contact forms, and doctor profiles.
-SEO & Accessibility Optimized – Ensures high search engine ranking and easy navigation.
-Fast Deployment – One-click build and publish to GitHub Pages.
-Offline Editing – Modify content without an internet connection, then sync when ready.
-Use Cases:
-Display clinic services, doctor profiles, and appointment information.
-Share health tips, blog posts, and medical news.
-Provide contact details, maps, and emergency hotline info.
+        <section id="doctors">
+            <h2>Meet Our Doctors</h2>
+            <p>Our team of specialists is here to provide you with the best care.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <section id="blog">
+            <h2>Health Blog</h2>
+            <p>Stay updated with the latest health tips and news.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Wankam Medical Center. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
