@@ -8,9 +8,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: url('background.jpg') no-repeat center center/cover;
+            animation: fadeIn 1.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header class="fade-in">
         <div class="container">
             <h1>Wankam Medical Center</h1>
             <nav>
@@ -24,7 +43,7 @@
         </div>
     </header>
 
-    <section id="hero">
+    <section id="hero" class="fade-in">
         <div class="hero-content">
             <h2>Your Health, Our Priority</h2>
             <p>Providing world-class medical services with a personal touch.</p>
@@ -33,7 +52,7 @@
     </section>
 
     <main class="container">
-        <section id="services" class="section">
+        <section id="services" class="section fade-in">
             <h2>Our Services</h2>
             <div class="grid">
                 <div class="card">
@@ -54,12 +73,24 @@
             </div>
         </section>
 
-        <section id="doctors" class="section">
+        <section id="doctors" class="section fade-in">
             <h2>Meet Our Doctors</h2>
             <p>Our experienced team is dedicated to providing the best care possible.</p>
         </section>
 
-        <section id="contact" class="section">
+        <section id="testimonials" class="section fade-in">
+            <h2>What Our Patients Say</h2>
+            <div class="testimonial">
+                <p>"Wankam Medical Center provided me with exceptional care. The doctors are truly outstanding!"</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The emergency care team saved my life. I highly recommend their services."</p>
+                <h4>- Jane Smith</h4>
+            </div>
+        </section>
+
+        <section id="contact" class="section fade-in">
             <h2>Contact Us</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
@@ -72,19 +103,30 @@
             </form>
         </section>
 
-        <section id="blog" class="section">
+        <section id="blog" class="section fade-in">
             <h2>Health Blog</h2>
             <p>Stay informed with the latest health tips and news.</p>
         </section>
     </main>
 
-    <footer>
+    <footer class="fade-in">
         <div class="container">
             <p>&copy; 2025 Wankam Medical Center. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeElements = document.querySelectorAll(".fade-in");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.2 });
+            fadeElements.forEach(element => observer.observe(element));
+        });
+    </script>
 </body>
 </html>
-
