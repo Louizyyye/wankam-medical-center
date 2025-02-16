@@ -7,38 +7,59 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Wankam Medical Center</h1>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#doctors">Doctors</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Wankam Medical Center</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="hero">
+    <section id="hero">
+        <div class="hero-content">
             <h2>Your Health, Our Priority</h2>
-            <p>Advanced medical care with a personal touch.</p>
-            <a href="#contact" class="btn">Book an Appointment</a>
-        </section>
+            <p>Providing world-class medical services with a personal touch.</p>
+            <a href="#contact" class="btn-primary">Book an Appointment</a>
+        </div>
+    </section>
 
-        <section id="services">
+    <main class="container">
+        <section id="services" class="section">
             <h2>Our Services</h2>
-            <p>We offer a range of medical services tailored to your needs.</p>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>General Consultation</h3>
+                    <p>Expert consultations for all your healthcare needs.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-procedures"></i>
+                    <h3>Emergency Care</h3>
+                    <p>24/7 emergency medical assistance and treatment.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Cardiology</h3>
+                    <p>Advanced heart care services for all patients.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="doctors">
+        <section id="doctors" class="section">
             <h2>Meet Our Doctors</h2>
-            <p>Our team of specialists is here to provide you with the best care.</p>
+            <p>Our experienced team is dedicated to providing the best care possible.</p>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Contact Us</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
@@ -47,18 +68,20 @@
                 <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
-                <button type="submit" class="btn">Send</button>
+                <button type="submit" class="btn-primary">Send</button>
             </form>
         </section>
 
-        <section id="blog">
+        <section id="blog" class="section">
             <h2>Health Blog</h2>
-            <p>Stay updated with the latest health tips and news.</p>
+            <p>Stay informed with the latest health tips and news.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Wankam Medical Center. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Wankam Medical Center. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
